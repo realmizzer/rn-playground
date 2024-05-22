@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import {Animated, Button, SafeAreaView, StyleSheet} from 'react-native';
 
 const ITEM_SIZE = 100;
@@ -8,7 +8,7 @@ export default function App() {
   const crossAnimValue = useRef(new Animated.Value(0)).current;
   const animationRef = useRef<Animated.CompositeAnimation | null>(null);
 
-  const createAnimation = () => {
+  const createAnimation = useCallback(() => {
     animationRef.current = Animated.loop(
       Animated.parallel([
         Animated.sequence([
@@ -31,12 +31,12 @@ export default function App() {
         ]),
       ]),
     );
-  };
+  }, [circleAnimValue, crossAnimValue]);
 
-  const onStartPress = () => {
+  const onStartPress = useCallback(() => {
     createAnimation();
     animationRef.current?.start();
-  };
+  }, [createAnimation]);
 
   const onStopPress = () => {
     animationRef.current?.stop();
