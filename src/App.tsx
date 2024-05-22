@@ -1,14 +1,15 @@
 import React, {useEffect, useRef} from 'react';
-import {Animated, SafeAreaView, StyleSheet} from 'react-native';
+import {Animated, Button, SafeAreaView, StyleSheet} from 'react-native';
 
 const ITEM_SIZE = 100;
 
 export default function App() {
   const circleAnimValue = useRef(new Animated.Value(0.5)).current;
   const crossAnimValue = useRef(new Animated.Value(0)).current;
+  const animationRef = useRef<Animated.CompositeAnimation | null>(null);
 
-  useEffect(() => {
-    Animated.loop(
+  const createAnimation = () => {
+    animationRef.current = Animated.loop(
       Animated.parallel([
         Animated.sequence([
           Animated.spring(circleAnimValue, {toValue: 1, useNativeDriver: true}),
@@ -29,8 +30,22 @@ export default function App() {
           Animated.spring(crossAnimValue, {toValue: 1, useNativeDriver: true}),
         ]),
       ]),
-    ).start();
-  }, [circleAnimValue, crossAnimValue]);
+    );
+  };
+
+  const onStartPress = () => {
+    createAnimation();
+    animationRef.current?.start();
+  };
+
+  const onStopPress = () => {
+    animationRef.current?.stop();
+  };
+
+  useEffect(() => {
+    createAnimation();
+    onStartPress();
+  }, [createAnimation, onStartPress]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -55,6 +70,8 @@ export default function App() {
           },
         ]}
       />
+      <Button title={'Start'} onPress={onStartPress} />
+      <Button title={'Stop'} onPress={onStopPress} />
     </SafeAreaView>
   );
 }
