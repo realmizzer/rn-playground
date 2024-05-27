@@ -3,7 +3,11 @@ import {Animated, Button, StyleSheet, View} from 'react-native';
 
 const ITEM_SIZE = 100;
 
-export const CircleAnimation = () => {
+interface IProps {
+  hasActions?: boolean;
+}
+
+export const CircleAnimation = ({hasActions}: IProps) => {
   const circleAnimValue = useRef(new Animated.Value(0.5)).current;
   const crossAnimValue = useRef(new Animated.Value(0)).current;
   const animationRef = useRef<Animated.CompositeAnimation | null>(null);
@@ -70,8 +74,12 @@ export const CircleAnimation = () => {
           },
         ]}
       />
-      <Button title={'Start'} onPress={onStartPress} />
-      <Button title={'Stop'} onPress={onStopPress} />
+      {hasActions && (
+        <>
+          <Button title={'Start'} onPress={onStartPress} />
+          <Button title={'Stop'} onPress={onStopPress} />
+        </>
+      )}
     </View>
   );
 };

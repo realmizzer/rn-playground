@@ -1,23 +1,19 @@
 import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {CircleAnimation} from '../CircleAnimation/CircleAnimation.tsx';
-import {routes} from './routes.ts';
+import {AnimationStack} from './AnimationStack/AnimationStack.tsx';
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={routes.CircleAnimation}>
-        <Stack.Screen
-          name={routes.CircleAnimation}
-          component={CircleAnimation}
-          options={{
-            title: 'Circle animation',
-          }}
-        />
-      </Stack.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Tab.Screen name={'Animation'} component={AnimationStack} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };

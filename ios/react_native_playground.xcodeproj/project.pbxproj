@@ -13,8 +13,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		96202D4856FDCE9E3D9B0655 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4C60021325066D8075238D46 /* PrivacyInfo.xcprivacy */; };
-		A798C7EA8BA26171D674AAFA /* Pods_react_native_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B745E1AA21D24FA2740E8586 /* Pods_react_native_playground.framework */; };
-		DD8F5281CB1F2B3C8D250777 /* Pods_react_native_playground_react_native_playgroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCF2FAED0146A5B6AA984F1 /* Pods_react_native_playground_react_native_playgroundTests.framework */; };
+		F3B7F0AAAFFD6497BD940385 /* libPods-react_native_playground-react_native_playgroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EE58E44F6AC9EE81E37296 /* libPods-react_native_playground-react_native_playgroundTests.a */; };
+		FA15A59A9ADDBEE621CBA6C7 /* libPods-react_native_playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0752F80AD64DE977B558F1B /* libPods-react_native_playground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,15 +37,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = react_native_playground/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = react_native_playground/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = react_native_playground/main.m; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = react_native_playground/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		2FCF2FAED0146A5B6AA984F1 /* Pods_react_native_playground_react_native_playgroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_react_native_playground_react_native_playgroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-react_native_playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-react_native_playground.debug.xcconfig"; path = "Target Support Files/Pods-react_native_playground/Pods-react_native_playground.debug.xcconfig"; sourceTree = "<group>"; };
 		4C60021325066D8075238D46 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = react_native_playground/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-react_native_playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-react_native_playground.release.xcconfig"; path = "Target Support Files/Pods-react_native_playground/Pods-react_native_playground.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-react_native_playground-react_native_playgroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-react_native_playground-react_native_playgroundTests.debug.xcconfig"; path = "Target Support Files/Pods-react_native_playground-react_native_playgroundTests/Pods-react_native_playground-react_native_playgroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = react_native_playground/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-react_native_playground-react_native_playgroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-react_native_playground-react_native_playgroundTests.release.xcconfig"; path = "Target Support Files/Pods-react_native_playground-react_native_playgroundTests/Pods-react_native_playground-react_native_playgroundTests.release.xcconfig"; sourceTree = "<group>"; };
-		B745E1AA21D24FA2740E8586 /* Pods_react_native_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_react_native_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EE58E44F6AC9EE81E37296 /* libPods-react_native_playground-react_native_playgroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-react_native_playground-react_native_playgroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0752F80AD64DE977B558F1B /* libPods-react_native_playground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-react_native_playground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -54,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8F5281CB1F2B3C8D250777 /* Pods_react_native_playground_react_native_playgroundTests.framework in Frameworks */,
+				F3B7F0AAAFFD6497BD940385 /* libPods-react_native_playground-react_native_playgroundTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A798C7EA8BA26171D674AAFA /* Pods_react_native_playground.framework in Frameworks */,
+				FA15A59A9ADDBEE621CBA6C7 /* libPods-react_native_playground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +94,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				4C60021325066D8075238D46 /* PrivacyInfo.xcprivacy */,
 			);
 			name = react_native_playground;
@@ -105,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				B745E1AA21D24FA2740E8586 /* Pods_react_native_playground.framework */,
-				2FCF2FAED0146A5B6AA984F1 /* Pods_react_native_playground_react_native_playgroundTests.framework */,
+				E0752F80AD64DE977B558F1B /* libPods-react_native_playground.a */,
+				C9EE58E44F6AC9EE81E37296 /* libPods-react_native_playground-react_native_playgroundTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
