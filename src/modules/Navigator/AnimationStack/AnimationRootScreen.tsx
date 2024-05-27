@@ -1,3 +1,4 @@
+import React from 'react';
 import {PreviewCard} from '../../PreviewCard/PreviewCard.tsx';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {CircleAnimation} from '../../CircleAnimation/CircleAnimation.tsx';
@@ -8,6 +9,7 @@ interface IProps {
   navigation: NavigationProp<RootStackParamList, 'Root'>;
 }
 
+// Корневной экран для навигации по стэку с анимациями.
 export const AnimationRootScreen = ({navigation}: IProps) => {
   const _onPress = (routeName: keyof typeof routes.Animation) => {
     navigation.navigate(routeName);

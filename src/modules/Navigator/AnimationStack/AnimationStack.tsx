@@ -1,3 +1,4 @@
+import React from 'react';
 import {routes} from '../routes.ts';
 import {CircleAnimation} from '../../CircleAnimation/CircleAnimation.tsx';
 import {AnimationRootScreen} from './AnimationRootScreen.tsx';
@@ -5,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
+// Стэк для уроков с анимациями.
 export const AnimationStack = () => {
   return (
     <Stack.Navigator

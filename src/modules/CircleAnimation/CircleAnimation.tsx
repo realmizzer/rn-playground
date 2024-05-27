@@ -7,6 +7,7 @@ interface IProps {
   hasActions?: boolean;
 }
 
+// Тест с анимацией превращения квадрата в круг.
 export const CircleAnimation = ({hasActions}: IProps) => {
   const circleAnimValue = useRef(new Animated.Value(0.5)).current;
   const crossAnimValue = useRef(new Animated.Value(0)).current;
