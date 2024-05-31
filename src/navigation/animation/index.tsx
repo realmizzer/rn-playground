@@ -1,7 +1,7 @@
 import React from 'react';
 import {routes} from '../routes.ts';
-import {CircleAnimation} from '../../CircleAnimation/CircleAnimation.tsx';
-import {AnimationRootScreen} from './AnimationRootScreen.tsx';
+import {CircleAnimationScreen} from './screens/CircleAnimationScreen.tsx';
+import {AnimationRootScreen} from './screens/AnimationRootScreen.tsx';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -18,7 +18,7 @@ export const AnimationStack = () => {
       />
       <Stack.Screen
         name={routes.Animation.Circle}
-        component={CircleAnimation}
+        component={CircleAnimationScreen}
         options={{
           headerShown: true,
         }}

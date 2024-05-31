@@ -6,6 +6,9 @@ export const routes = {
     Root: 'Root',
     Circle: 'Circle',
   },
+  Settings: {
+    Root: 'Root',
+  },
 } as const;
 
 /**
@@ -14,4 +17,5 @@ export const routes = {
 export type RootStackParamList = {
   [routes.Animation.Root]: undefined;
   [routes.Animation.Circle]: undefined;
+  [routes.Settings.Root]: undefined;
 };

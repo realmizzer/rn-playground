@@ -3,12 +3,24 @@ import {Animated, Button, StyleSheet, View} from 'react-native';
 
 const ITEM_SIZE = 100;
 
+const styles = StyleSheet.create({
+  container: {},
+  item: {
+    width: ITEM_SIZE,
+    height: ITEM_SIZE,
+    backgroundColor: '#5555FF',
+  },
+  actions: {
+    marginTop: 16,
+  },
+});
+
 interface IProps {
-  hasActions?: boolean;
+  hasActions: boolean;
 }
 
-// Тест с анимацией превращения квадрата в круг.
-export const CircleAnimation = ({hasActions}: IProps) => {
+// Компонент с анимацией квадрата в круг.
+export const AnimatedCircle = ({hasActions = false}: IProps) => {
   const circleAnimValue = useRef(new Animated.Value(0.5)).current;
   const crossAnimValue = useRef(new Animated.Value(0)).current;
   const animationRef = useRef<Animated.CompositeAnimation | null>(null);
@@ -76,24 +88,11 @@ export const CircleAnimation = ({hasActions}: IProps) => {
         ]}
       />
       {hasActions && (
-        <>
+        <View style={styles.actions}>
           <Button title={'Start'} onPress={onStartPress} />
           <Button title={'Stop'} onPress={onStopPress} />
-        </>
+        </View>
       )}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  item: {
-    width: ITEM_SIZE,
-    height: ITEM_SIZE,
-    backgroundColor: '#5555FF',
-  },
-});

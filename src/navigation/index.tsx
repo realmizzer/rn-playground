@@ -1,8 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import {AnimationStack} from './AnimationStack/AnimationStack.tsx';
 import {routes} from './routes.ts';
+import {AnimationStack} from './animation';
+import {SettingsStack} from './settings';
 
 const Tab = createBottomTabNavigator<typeof routes>();
 
@@ -17,6 +18,7 @@ export const Navigator = () => {
           headerShown: false,
         }}>
         <Tab.Screen name={'Animation'} component={AnimationStack} />
+        <Tab.Screen name={'Settings'} component={SettingsStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
-import {PreviewCard} from '../../PreviewCard/PreviewCard.tsx';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
-import {CircleAnimation} from '../../CircleAnimation/CircleAnimation.tsx';
-import {RootStackParamList, routes} from '../routes.ts';
+import {PreviewCard} from '../../../modules/PreviewCard/PreviewCard.tsx';
+import {SafeAreaView, View} from 'react-native';
+import {RootStackParamList, routes} from '../../routes.ts';
 import {NavigationProp} from '@react-navigation/native';
+import {AnimatedCircle} from '../../../modules/AnimatedCircle/AnimatedCircle.tsx';
+import {defaultScreenStyles} from '../../styles.ts';
 
 interface IProps {
   navigation: NavigationProp<RootStackParamList, 'Root'>;
@@ -17,17 +18,11 @@ export const AnimationRootScreen = ({navigation}: IProps) => {
 
   return (
     <SafeAreaView>
-      <View style={styles.container}>
+      <View style={defaultScreenStyles.container}>
         <PreviewCard title={'Circle'} onPress={() => _onPress('Circle')}>
-          <CircleAnimation />
+          <AnimatedCircle hasActions={false} />
         </PreviewCard>
       </View>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 8,
-  },
-});
