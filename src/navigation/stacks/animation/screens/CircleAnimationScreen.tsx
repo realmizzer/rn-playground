@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {AnimatedCircle} from '../../../modules/AnimatedCircle/AnimatedCircle.tsx';
+import {AnimatedCircle} from '../../../../modules/AnimatedCircle/AnimatedCircle.tsx';
 
 const styles = StyleSheet.create({
   container: {

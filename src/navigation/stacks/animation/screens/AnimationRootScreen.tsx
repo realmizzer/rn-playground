@@ -1,10 +1,10 @@
 import React from 'react';
-import {PreviewCard} from '../../../modules/PreviewCard/PreviewCard.tsx';
+import {PreviewCard} from '../../../../modules/PreviewCard/PreviewCard.tsx';
 import {SafeAreaView, View} from 'react-native';
-import {RootStackParamList, routes} from '../../routes.ts';
+import {RootStackParamList, routes} from '../../../constants/routes.ts';
 import {NavigationProp} from '@react-navigation/native';
-import {AnimatedCircle} from '../../../modules/AnimatedCircle/AnimatedCircle.tsx';
-import {defaultScreenStyles} from '../../styles.ts';
+import {AnimatedCircle} from '../../../../modules/AnimatedCircle/AnimatedCircle.tsx';
+import {defaultScreenStyles} from '../../../constants/styles.ts';
 
 interface IProps {
   navigation: NavigationProp<RootStackParamList, 'Root'>;
