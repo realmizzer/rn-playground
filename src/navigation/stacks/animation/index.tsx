@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HeaderBackButton} from '../../components/HeaderBackButton.tsx';
 import {routes} from '../../constants/routes.ts';
 import {useRoute} from '@react-navigation/native';
+import {ReanimatedAnimationScreen} from './screens/ReanimatedAnimationScreen.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,15 @@ export const AnimationStack = () => {
         component={CircleAnimationScreen}
         options={{
           headerShown: true,
+          title: 'Circle Animation',
+        }}
+      />
+      <Stack.Screen
+        name={routes.animation.screens.reanimated}
+        component={ReanimatedAnimationScreen}
+        options={{
+          headerShown: true,
+          title: 'Reanimated',
         }}
       />
     </Stack.Navigator>
