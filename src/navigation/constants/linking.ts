@@ -5,10 +5,25 @@ export const linking: LinkingOptions<RootStackParamList> = {
   prefixes: ['rn-playground://', 'https://rn-playground.com'],
   config: {
     screens: {
-      [routes.Animation.Root.name]: routes.Animation.Root.link,
-      [routes.Animation.Circle.name]: routes.Animation.Circle.link,
-      [routes.Settings.Root.name]: routes.Settings.Root.link,
-      [routes.Deeplink.Root.name]: routes.Deeplink.Root.link,
+      [routes.animation.tabName]: {
+        path: routes.animation.tabName,
+        screens: {
+          [routes.animation.screens.root]: routes.animation.screens.root,
+          [routes.animation.screens.circle]: routes.animation.screens.circle,
+        },
+      },
+      [routes.settings.tabName]: {
+        path: routes.settings.tabName,
+        screens: {
+          [routes.settings.screens.root]: routes.settings.screens.root,
+        },
+      },
+      [routes.deeplink.tabName]: {
+        path: routes.deeplink.tabName,
+        screens: {
+          [routes.deeplink.screens.root]: routes.deeplink.screens.root,
+        },
+      },
     },
   },
 };

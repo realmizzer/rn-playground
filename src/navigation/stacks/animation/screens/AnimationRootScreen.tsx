@@ -7,19 +7,19 @@ import {AnimatedCircle} from '../../../../modules/AnimatedCircle/AnimatedCircle.
 import {defaultScreenStyles} from '../../../constants/styles.ts';
 
 interface IProps {
-  navigation: NavigationProp<RootStackParamList, 'Root'>;
+  navigation: NavigationProp<RootStackParamList, 'animation'>;
 }
 
 // Корневной экран для навигации по стэку с анимациями.
 export const AnimationRootScreen = ({navigation}: IProps) => {
-  const _onPress = (routeName: keyof typeof routes.Animation) => {
-    navigation.navigate(routeName);
+  const _onPress = () => {
+    navigation.navigate(routes.animation.screens.circle);
   };
 
   return (
     <SafeAreaView>
       <View style={defaultScreenStyles.container}>
-        <PreviewCard title={'Circle'} onPress={() => _onPress('Circle')}>
+        <PreviewCard title={'Circle'} onPress={_onPress}>
           <AnimatedCircle hasActions={false} />
         </PreviewCard>
       </View>

@@ -19,9 +19,12 @@ export const Navigator = () => {
         screenOptions={{
           headerShown: false,
         }}>
-        <Tab.Screen name={'Animation'} component={AnimationStack} />
-        <Tab.Screen name={'Settings'} component={SettingsStack} />
-        <Tab.Screen name={'Deeplink'} component={DeeplinkStack} />
+        <Tab.Screen
+          name={routes.animation.tabName}
+          component={AnimationStack}
+        />
+        <Tab.Screen name={routes.settings.tabName} component={SettingsStack} />
+        <Tab.Screen name={routes.deeplink.tabName} component={DeeplinkStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );
