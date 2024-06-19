@@ -1,6 +1,6 @@
 import React from 'react';
 import {PreviewCard} from '~/modules/PreviewCard/PreviewCard.tsx';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import {RootStackParamList, routes} from '~/navigation/constants/routes.ts';
 import {NavigationProp} from '@react-navigation/native';
 import {AnimatedCircle} from '~/modules/AnimatedCircle/AnimatedCircle.tsx';
@@ -35,6 +35,9 @@ const cards: ICard[] = [
 ];
 
 const styles = StyleSheet.create({
+  list: {
+    height: '100%',
+  },
   card: {
     marginBottom: 12,
   },
@@ -45,17 +48,19 @@ export const AnimationRootScreen = ({navigation}: IProps) => {
   return (
     <SafeAreaView>
       <View style={defaultScreenStyles.container}>
-        {cards.map((item, index) => (
-          <PreviewCard
-            key={index}
-            title={item.title}
-            onPress={() =>
-              navigation.navigate(item.routeName as keyof RootStackParamList)
-            }
-            containerStyle={styles.card}>
-            {item.children}
-          </PreviewCard>
-        ))}
+        <ScrollView contentContainerStyle={styles.list}>
+          {cards.map((item, index) => (
+            <PreviewCard
+              key={index}
+              title={item.title}
+              onPress={() =>
+                navigation.navigate(item.routeName as keyof RootStackParamList)
+              }
+              containerStyle={styles.card}>
+              {item.children}
+            </PreviewCard>
+          ))}
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
