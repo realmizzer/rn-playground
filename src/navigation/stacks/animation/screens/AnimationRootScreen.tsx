@@ -5,6 +5,7 @@ import {RootStackParamList, routes} from '~/navigation/constants/routes.ts';
 import {NavigationProp} from '@react-navigation/native';
 import {AnimatedCircle} from '~/modules/AnimatedCircle/AnimatedCircle.tsx';
 import {defaultScreenStyles} from '~/navigation/constants/styles.ts';
+import {GestureSquare} from '~/modules/GestureSquare/GestureSquare.tsx';
 
 interface IProps {
   navigation: NavigationProp<RootStackParamList, 'animation'>;
@@ -15,6 +16,15 @@ interface ICard {
   routeName: keyof RootStackParamList;
   children: React.ReactNode;
 }
+
+const styles = StyleSheet.create({
+  list: {
+    height: '100%',
+  },
+  card: {
+    marginBottom: 12,
+  },
+});
 
 const cards: ICard[] = [
   {
@@ -30,18 +40,9 @@ const cards: ICard[] = [
   {
     title: 'PanGesture',
     routeName: routes.animation.screens.gesture,
-    children: undefined,
+    children: <GestureSquare squareStyles={{width: 60, height: 60}} />,
   },
 ];
-
-const styles = StyleSheet.create({
-  list: {
-    height: '100%',
-  },
-  card: {
-    marginBottom: 12,
-  },
-});
 
 // Корневной экран для навигации по стэку с анимациями.
 export const AnimationRootScreen = ({navigation}: IProps) => {
