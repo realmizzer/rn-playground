@@ -4,11 +4,12 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['./src'],
+        root: ['.'],
         extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
         alias: {
-          '@modules': './src/modules',
-          '@navigation': './src/navigation',
+          '~': './src',
+          '~modules': './src/modules',
+          '~navigation': './src/navigation',
         },
       },
     ],

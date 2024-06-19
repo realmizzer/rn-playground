@@ -2,8 +2,8 @@ import React from 'react';
 import {CircleAnimationScreen} from './screens/CircleAnimationScreen.tsx';
 import {AnimationRootScreen} from './screens/AnimationRootScreen.tsx';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HeaderBackButton} from '../../components/HeaderBackButton.tsx';
-import {routes} from '../../constants/routes.ts';
+import {HeaderBackButton} from '~/navigation/components/HeaderBackButton.tsx';
+import {routes} from '~/navigation/constants/routes.ts';
 import {useRoute} from '@react-navigation/native';
 import {ReanimatedAnimationScreen} from './screens/ReanimatedAnimationScreen.tsx';
 

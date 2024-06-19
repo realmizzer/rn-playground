@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
-import {PreviewCard} from '../../../../modules/PreviewCard/PreviewCard.tsx';
+import {PreviewCard} from '~/modules/PreviewCard/PreviewCard.tsx';
 import {SafeAreaView, ScrollView} from 'react-native';
-import {defaultScreenStyles} from '../../../constants/styles.ts';
+import {defaultScreenStyles} from '~/navigation/constants/styles.ts';
 
 export const DeeplinkRootScreen = () => {
   const cards = useMemo(() => {

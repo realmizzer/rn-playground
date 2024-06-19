@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {AppThemeSwitch} from '../../../../modules/AppTheme/AppThemeSwitch.tsx';
-import {defaultScreenStyles} from '../../../constants/styles.ts';
+import {AppThemeSwitch} from '~/modules/AppTheme/AppThemeSwitch.tsx';
+import {defaultScreenStyles} from '~/navigation/constants/styles.ts';
 
 export const SettingsRootScreen = () => {
   return (

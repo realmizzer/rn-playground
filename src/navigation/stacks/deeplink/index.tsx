@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {DeeplinkRootScreen} from './screens/DeeplinkRootScreen.tsx';
-import {routes} from '../../constants/routes.ts';
+import {routes} from '~/navigation/constants/routes.ts';
 import {useRoute} from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator();

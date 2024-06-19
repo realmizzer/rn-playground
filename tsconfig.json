@@ -1,13 +1,16 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@modules": [
-        "modules"
+      "~/*": [
+        "src/*"
       ],
-      "@navigation": [
-        "navigation"
+      "~modules/*": [
+        "modules/*"
+      ],
+      "~navigation/*": [
+        "navigation/*"
       ]
     }
   }
