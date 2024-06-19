@@ -6,6 +6,7 @@ import {HeaderBackButton} from '~/navigation/components/HeaderBackButton.tsx';
 import {routes} from '~/navigation/constants/routes.ts';
 import {useRoute} from '@react-navigation/native';
 import {ReanimatedAnimationScreen} from './screens/ReanimatedAnimationScreen.tsx';
+import {PanGestureScreen} from '~/navigation/stacks/animation/screens/PanGestureScreen.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,14 @@ export const AnimationStack = () => {
         options={{
           headerShown: true,
           title: 'Reanimated',
+        }}
+      />
+      <Stack.Screen
+        name={routes.animation.screens.gesture}
+        component={PanGestureScreen}
+        options={{
+          headerShown: true,
+          title: 'PanGestureHandler',
         }}
       />
     </Stack.Navigator>

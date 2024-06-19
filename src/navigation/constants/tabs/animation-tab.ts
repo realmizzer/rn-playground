@@ -3,6 +3,7 @@ export const animation = {
     root: 'root',
     circle: 'circle',
     reanimated: 'reanimated',
+    gesture: 'gesture',
   },
   tabName: 'animation',
 } as const;

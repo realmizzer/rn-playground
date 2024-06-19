@@ -20,4 +20,5 @@ export type RootStackParamList = {
   [routes.deeplink.tabName]: undefined;
   [routes.animation.screens.circle]: undefined;
   [routes.animation.screens.reanimated]: undefined;
+  [routes.animation.screens.gesture]: undefined;
 };
