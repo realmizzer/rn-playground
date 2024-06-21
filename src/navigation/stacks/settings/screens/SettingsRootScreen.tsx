@@ -1,12 +1,11 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {AppThemeSwitch} from '~/modules/AppTheme/AppThemeSwitch.tsx';
-import {defaultScreenStyles} from '~/navigation/constants/styles.ts';
+import {ThemeSwitch} from '~/modules/AppTheme/components/ThemeSwitch.tsx';
 
 export const SettingsRootScreen = () => {
   return (
-    <SafeAreaView style={defaultScreenStyles.container}>
-      <AppThemeSwitch />
+    <SafeAreaView>
+      <ThemeSwitch />
     </SafeAreaView>
   );
 };
