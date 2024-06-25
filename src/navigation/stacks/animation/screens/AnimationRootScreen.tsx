@@ -42,6 +42,11 @@ const cards: ICard[] = [
     routeName: routes.animation.screens.gesture,
     children: <GestureSquare squareStyles={{width: 60, height: 60}} />,
   },
+  {
+    title: 'TeachingHole',
+    routeName: routes.animation.screens.teachingHole,
+    children: null,
+  },
 ];
 
 // Корневной экран для навигации по стэку с анимациями.

@@ -21,4 +21,5 @@ export type RootStackParamList = {
   [routes.animation.screens.circle]: undefined;
   [routes.animation.screens.reanimated]: undefined;
   [routes.animation.screens.gesture]: undefined;
+  [routes.animation.screens.teachingHole]: undefined;
 };

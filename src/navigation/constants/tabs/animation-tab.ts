@@ -4,6 +4,7 @@ export const animation = {
     circle: 'circle',
     reanimated: 'reanimated',
     gesture: 'gesture',
+    teachingHole: 'teachingHole',
   },
   tabName: 'animation',
 } as const;

@@ -7,6 +7,7 @@ import {routes} from '~/navigation/constants/routes.ts';
 import {useRoute} from '@react-navigation/native';
 import {ReanimatedAnimationScreen} from './screens/ReanimatedAnimationScreen.tsx';
 import {PanGestureScreen} from '~/navigation/stacks/animation/screens/PanGestureScreen.tsx';
+import {TeachingHoleScreen} from '~/navigation/stacks/animation/screens/TeachingHoleScreen.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +46,14 @@ export const AnimationStack = () => {
         options={{
           headerShown: true,
           title: 'PanGestureHandler',
+        }}
+      />
+      <Stack.Screen
+        name={routes.animation.screens.teachingHole}
+        component={TeachingHoleScreen}
+        options={{
+          headerShown: true,
+          title: 'TeachingHole',
         }}
       />
     </Stack.Navigator>

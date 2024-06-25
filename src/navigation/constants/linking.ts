@@ -10,6 +10,11 @@ export const linking: LinkingOptions<RootStackParamList> = {
         screens: {
           [routes.animation.screens.root]: routes.animation.screens.root,
           [routes.animation.screens.circle]: routes.animation.screens.circle,
+          [routes.animation.screens.reanimated]:
+            routes.animation.screens.reanimated,
+          [routes.animation.screens.gesture]: routes.animation.screens.gesture,
+          [routes.animation.screens.teachingHole]:
+            routes.animation.screens.teachingHole,
         },
       },
       [routes.settings.tabName]: {
